@@ -19,6 +19,12 @@
           >
         </li>
       </ng-container>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/errors" routerLinkActive="active"
+          >Errors</a
+        >
+      </li>
     </ul>
 
     <!-- <div *ngIf="loggedIn" class="dropdown">
@@ -29,7 +35,11 @@
       </div>
     </div> -->
 
-    <div *ngIf="(accountService.currentUser$ | async) as user" class="btn-group" dropdown>
+    <div
+      *ngIf="accountService.currentUser$ | async as user"
+      class="btn-group"
+      dropdown
+    >
       <button
         id="button-animated"
         dropdownToggle
@@ -37,7 +47,7 @@
         class="btn btn-primary dropdown-toggle"
         aria-controls="dropdown-animated"
       >
-        Welcome {{user.username | titlecase}} <span class="caret"></span>
+        Welcome {{ user.username | titlecase }} <span class="caret"></span>
       </button>
       <ul
         id="dropdown-animated"
